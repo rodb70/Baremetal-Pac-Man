@@ -60,10 +60,19 @@ typedef struct {
 
 #include "pacman.h"
 
-typedef enum {none, CHASE, SCATTER, FRIGHTENED, EATEN, PEN} ghost_state;
+typedef enum
+{
+    none,
+    CHASE,
+    SCATTER,
+    FRIGHTENED,
+    EATEN,
+    PEN
+} ghost_state;
 
 /*4 types of ghosts.*/
-typedef struct{
+typedef struct
+{
   uint8_t turn;
   uint32_t x;
   uint32_t y;
@@ -79,7 +88,8 @@ typedef struct{
 
 /*Struct that points to the four ghosts
  * TODO: SET SPEEDS BASED ON LEVEL SOMEWHERE. THIS IS UNINITIALISED*/
-typedef struct{
+typedef struct
+{
   ghost* blinky;
   ghost* inky;
   ghost* pinky;
@@ -90,7 +100,8 @@ typedef struct{
 } ghosts;
 
 /*Game struct*/
-typedef struct {
+typedef struct
+{
   uint32_t score;
   uint32_t lives;
   uint32_t level;
@@ -116,4 +127,5 @@ void display_end_screen(char *message1, char *message2, int offset, volatile uns
 void init_ghosts_sprite(ghost *ghosts[]);
 void change_ghost_animation(ghost *ghosts[]);
 void control_ghost_speed(ghost *ghost);
+
 #endif

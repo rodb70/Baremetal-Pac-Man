@@ -2,35 +2,46 @@
 #include "char_sprite.h"
 
 
-void print_character(uint16_t *colour_ptr, uint32_t x, uint32_t y, volatile unsigned char *fb) {
-  for (int i = 0; i < CHAR_WIDTH; ++i) {
-    for (int j = 0; j < CHAR_HEIGHT; ++j) {
-      draw_pixel(x + j, y + i, fb, colour_ptr[j + (i * CHAR_WIDTH)]);
+void print_character(uint16_t *colour_ptr, uint32_t x, uint32_t y, volatile unsigned char *fb)
+{
+    for (int i = 0; i < CHAR_WIDTH; ++i)
+    {
+        for (int j = 0; j < CHAR_HEIGHT; ++j)
+        {
+            draw_pixel(x + j, y + i, fb, colour_ptr[j + (i * CHAR_WIDTH)]);
+        }
     }
-  }
 }
 
-void print_character_colour(uint16_t *colour_ptr, uint16_t user_colour, uint32_t x, uint32_t y, volatile unsigned char *fb) {
-  for (int i = 0; i < CHAR_WIDTH; ++i) {
-    for (int j = 0; j < CHAR_HEIGHT; ++j) {
-      if(colour_ptr[j + (i * CHAR_WIDTH)]) {
-        draw_pixel(x + j, y + i, fb, user_colour);
-      }
+void print_character_colour(uint16_t *colour_ptr, uint16_t user_colour, uint32_t x, uint32_t y, volatile unsigned char *fb)
+{
+    for (int i = 0; i < CHAR_WIDTH; ++i)
+    {
+        for (int j = 0; j < CHAR_HEIGHT; ++j)
+        {
+            if (colour_ptr[j + (i * CHAR_WIDTH)])
+            {
+                draw_pixel(x + j, y + i, fb, user_colour);
+            }
+        }
     }
-  }
 }
 
-uint32_t power(uint32_t num_base, uint32_t power) {
+uint32_t power(uint32_t num_base, uint32_t power)
+{
 
-  if (power == 0) {
+  if (power == 0)
+  {
     return 1;
   }
 
   uint32_t result = num_base;
 
-  for (uint32_t i = 1; i < power; ++i) {
+  for (uint32_t i = 1; i < power; ++i)
+  {
     result *= num_base;
   }
+
   return result;
 }
 

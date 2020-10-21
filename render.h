@@ -5,9 +5,12 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include "game.h"
-typedef struct {
+
+typedef struct
+{
   int x;
   int y;
+
 } Point2D;
 
 #define TUNNEL_LEFT1(x, y)  ((x == 8)               && (y == 148))
@@ -40,4 +43,5 @@ void sub_point(Point2D a, Point2D b, Point2D *p);
 float dot_product(Point2D a, Point2D b);
 void get_barycentric(Point2D p, Point2D a, Point2D b, Point2D c, float *u, float *v, float *w);
 void render_triangle(Point2D v0, Point2D v1, Point2D v2, volatile unsigned char *fb, uint16_t colour);
+
 #endif

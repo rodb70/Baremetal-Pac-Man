@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include "util.h"
 #include "game.h"
+
 #define MAX_PEN_TIME   80
 #define PINKY_PEN_TIME 48
 #define INKY_PEN_TIME  72
@@ -39,7 +40,8 @@
 
 /*Definition for the four scatter points for clyde*/
 
-typedef struct{
+typedef struct
+{
   int x;
   int y;
 } coordinates;

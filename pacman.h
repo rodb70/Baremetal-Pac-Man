@@ -12,4 +12,5 @@ void get_pacman_board_coord(pacman *, int *, int *);
 void is_valid_vector(uint8_t *board, pacman *pacman_ptr);
 void change_pacman_animation(pacman *pacman_ptr);
 void control_pacman_speed(pacman *pacman_ptr);
+
 #endif
