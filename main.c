@@ -372,10 +372,6 @@ NEW_LIFE:
                 {
                     fruit_score = 1000;
                 }
-                else if( level <= 10 )
-                {
-                    fruit_score = 2000;
-                }
                 else if (level <= 12)
                 {
                     fruit_score = 3000;

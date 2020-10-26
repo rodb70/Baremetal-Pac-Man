@@ -313,6 +313,6 @@ void control_ghost_speed(ghost *ghost_ptr)
 {
     ghost_ptr->temp_x += ghost_ptr->speed * ghost_ptr->vec.x * BASE_SPEED;
     ghost_ptr->temp_y += ghost_ptr->speed * ghost_ptr->vec.y * BASE_SPEED;
-    ghost_ptr->x = (int) (ghost_ptr->temp_x);
-    ghost_ptr->y = (int) (ghost_ptr->temp_y);
+    ghost_ptr->x = abs( (int) (ghost_ptr->temp_x));
+    ghost_ptr->y = abs( (int) (ghost_ptr->temp_y));
 }

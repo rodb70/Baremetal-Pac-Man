@@ -127,7 +127,7 @@ uint8_t poll_controller(void)
 
     if( 0 == output )
     {
-        SDL_Delay( 5 );/*Sleep for 5 millisecond*/
+        SDL_Delay( 5 ); /* Sleep for 5 millisecond */
     }
     return output;
 }

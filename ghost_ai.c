@@ -10,7 +10,7 @@
 void init_ghosts(game *game_ptr)
 {
     static ghosts _ghosts;
-    static ghost _ghost[4];
+    static ghost _ghost[ 4 ];
     game_ptr->ghosts_ptr = &_ghosts;
     game_ptr->ghosts_ptr->blinky = &_ghost[ 0 ];
     game_ptr->ghosts_ptr->pinky = &_ghost[ 1 ];

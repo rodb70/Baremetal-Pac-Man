@@ -280,8 +280,8 @@ void draw_fruit_score(int point, int offset, volatile unsigned char *fb)
         score->bitmap = fruit_score_5000;
         break;
     }
-    int x_pos = 13 * 8 - 4;
-    int y_pos = 17 * 8 - 4 + offset;
+    int x_pos = ( 13 * 8 ) - 4;
+    int y_pos = ( 17 * 8 ) - 4 + offset;
     int height = score->height;
     int width = score->width;
     for( int y = 0; y < height; ++y )

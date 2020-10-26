@@ -1,4 +1,4 @@
-#include "../rpi1/rpi-mailbox-interface.h"
+#include "rpi-mailbox-interface.h"
 #include "game.h"
 
 volatile unsigned char *frame_buffer_init( void )
